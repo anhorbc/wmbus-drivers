@@ -123,7 +123,7 @@ private:
       ESP_LOGVV(TAG, "Signature of message is: '%X'", signature); 
       if (signature == 0xF3A9) {
         uint32_t flow{0};
-        uint8_t i = 22;
+        uint8_t i = 38;
         flow = (((uint32_t)telegram[i+1] << 8)  | ((uint32_t)telegram[i+0]));
         ret_val = (double)flow;
         ESP_LOGVV(TAG, "Found volume_flow with '%d'->'%f'", flow, ret_val.value());
