@@ -221,7 +221,7 @@ private:
     uint8_t tpl_ci_field = telegram[19];
     
     if (tpl_ci_field == 0x78) {
-      ret_val = this->get_615B(telegram);  
+      ret_val = this->get_6167(telegram);  
     }
     else if ((tpl_ci_field == 0x79) && (l_field > 49)) {
       uint16_t signature = ((uint16_t)telegram[20] << 8) | telegram[21];
